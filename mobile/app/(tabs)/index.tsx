@@ -10,7 +10,8 @@ export default function HomeScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
-        <Image
+        <Image       style={styles.reactLogo}
+
           source={require('@/assets/images/SteBank.png')}
         />
       }>
@@ -50,10 +51,13 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: '100%',
+    width: '100%',
     bottom: 0,
     left: 0,
+    right: 0,
     position: 'absolute',
   },
+
+
 });
