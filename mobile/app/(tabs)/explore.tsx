@@ -7,44 +7,56 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-function saldoConta(){
+function saldoConta() {
   Alert.alert('R$679,03');
 }
 
-function extrato(){
-  Alert.alert('')
+function extrato() {
+  Alert.alert('-16,98 | FARMACIA MORAES RIBEIRO LTDA');
+}
+
+function pix() {
+  Alert.alert('Transferir');
+}
+
+function cartoes() {
+  Alert.alert('| Cartão de débito');
 }
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-       headerImage={
-         <Image       style={styles.reactLogo}
-           source={require('@/assets/images/SteBank1.png')}
-         />
-       }>
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerImage={
+        <Image style={styles.reactLogo}
+          source={require('@/assets/images/SteBank1.png')}
+        />
+      }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Operações</ThemedText>
       </ThemedView>
       <ThemedText>A seguir você poderá fazer operações com o seu saldo bancário, ver o saldo em conta, visualizar o seu extrato e mais.</ThemedText>
-       
       <Button
-      title='Saldo em conta'
-      onPress={saldoConta}
+        title='Saldo em conta'
+        onPress={saldoConta}
       />
-
+      <Button
+        title='Extrato'
+        onPress={extrato}
+      />
+      <Button
+        title='Área Pix'
+        onPress={pix}
+      />
+      <Button
+        title='Cartões'
+        onPress={cartoes}
+      />
       <Collapsible title="Saldo em conta">
         <ThemedText>
-         R$679,03
+          R$679,03
         </ThemedText>
       </Collapsible>
-
-      <Button
-      title='Extrato'
-      onPress={extrato}
-      />
-
       <Collapsible title="Extrato">
         <ThemedText>
           -16,98 |FARMACIA MORAES RIBEIRO LTDA
@@ -61,23 +73,23 @@ export default function TabTwoScreen() {
           Transferir
         </ThemedText>
         <ThemedText>
-          Programar 
+          Programar
         </ThemedText>
-        <ThemedText> 
+        <ThemedText>
           Ler QR code
         </ThemedText>
-        <ThemedText> 
+        <ThemedText>
           Pix Copia e Cola
         </ThemedText>
       </Collapsible>
       <Collapsible title="Cartões">
-      <ThemedText>
-          | Cartão de débito 
+        <ThemedText>
+          | Cartão de débito
         </ThemedText>
-        <ThemedText> 
+        <ThemedText>
           Agência 0002
         </ThemedText>
-        <ThemedText> 
+        <ThemedText>
           Conta 8569575-2
         </ThemedText>
       </Collapsible>
